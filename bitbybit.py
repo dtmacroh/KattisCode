@@ -25,15 +25,33 @@ def loop(over):
 				bitCommanded = int(inp[2])
 				if array[resultBit] == "1" or array[bitCommanded]=="1":
 					array[resultBit] = "1"
-				if array[resultBit] == "?" and array[bitCommanded]=="?":
+				elif array[resultBit] == "0" and array[bitCommanded]=="0":
+					array[resultBit] = "0"
+				elif array[resultBit] == "0" and array[bitCommanded]=="?":
+					array[resultBit] = "?"
+				elif array[resultBit] == "?" and array[bitCommanded]=="0":
+					array[resultBit] = "?"
+				elif array[resultBit] == "?" and array[bitCommanded]=="?":
 					array[resultBit] = "?"
 			elif command == "AND":
 				bitCommanded = int(inp[2])
 				#print("arrayBitComm {}".format(array[bitCommanded]))
 				if array[resultBit] == "1" and array[bitCommanded]=="1":
 					array[resultBit] = "1"
-				if array[resultBit] == "?" or array[bitCommanded]=="?":
+				elif array[resultBit] == "1" and array[bitCommanded]=="0":
+					array[resultBit] = "0"
+				elif array[resultBit] == "0" and array[bitCommanded]=="1":
+					array[resultBit] = "0"
+				elif array[resultBit] == "0" and array[bitCommanded]=="0":
+					array[resultBit] = "0"
+				elif array[resultBit] == "?" and array[bitCommanded]=="0":
+					array[resultBit] = "0"
+				elif array[resultBit] == "0" and array[bitCommanded]=="?":
+					array[resultBit] = "0"
+				elif array[resultBit] == "?" or array[bitCommanded]=="?":
 					array[resultBit] = "?"
+				
+				
 				
 		for i in range(31,-1,-1):
 			print(array[i], end='')	
