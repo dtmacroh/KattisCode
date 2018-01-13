@@ -25,23 +25,24 @@ array = [int(numeric_string) for numeric_string in current_array]
 
 for i in range(0, num):
 	
-	num_to_compare = int(array[i])
+	num_to_compare = array[i]
+	min = array[i]
+	max= -1
+	minrange =i-1
+	 
+	for x in range (i-1, i): 
+		if array[x]>max:
+			max = array[x]
+
+	for y in range (i, num):
+		
+		if array[y]<min:
+			min = array[y]
 	
-	for x in range (0, i):
-		if num_to_compare < array[x] :
-			
-			array_pivot[i] = -1
-			x=i
-			c+=1
-			break
-	
-	if array_pivot[i]==0: 
-		for y in range (i, num):
-			if num_to_compare > array[y] :
-				array_pivot[i] = -1
-				y=num
-				c+=1
-				break
+	if num_to_compare > min or num_to_compare < max and max!=-1:
+		array_pivot[i] = -1
+		c+=1
+	#print("min {} , max {} , bad pivot count {}".format(min, max, c))
 			
 	#c1 = compareLower(num_to_compare, i)
 	#c2 = compareUpper(num_to_compare, i)
