@@ -1,7 +1,7 @@
 # bitbybit
 # Author:		Debbie Macrohon
 # Description:	Using various if-else statements and hardcoded commands
-
+#				for pseudo bit-manipulation using an array.
 
 
 def main():
