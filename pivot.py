@@ -44,12 +44,7 @@ for i in range(0, num):
 		array_pivot[i] = -1
 		c+=1
 	#print("min {} , max {} , bad pivot count {}".format(min, max, c))
-			
-	#c1 = compareLower(num_to_compare, i)
-	#c2 = compareUpper(num_to_compare, i)
 	
-	#if (c1 and c2):
-	#	count+=1
 
 
 print(num-c)
