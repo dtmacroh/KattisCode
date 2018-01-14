@@ -1,5 +1,8 @@
-#above_average
-
+# above_average
+# Author:		Debbie Macrohon
+# Description:	Getting the average of the scores
+#				and counting the percentage of students who are 
+#				above this value.
 rounds = int(input())
 array = [""]*rounds
 for i in range (0, rounds):
@@ -10,7 +13,7 @@ for i in range (0, rounds):
 	students = int(inputs[0])
 	sum = 0
 	above_av = 0
-	#THREEPLACES = Decimal(10) ** -3
+	
 	for x in range(1,students+1):
 		sum += float(inputs[x])
 	avg = float(sum/students)

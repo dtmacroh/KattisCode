@@ -1,4 +1,7 @@
-#bitbybit
+# bitbybit
+# Author:		Debbie Macrohon
+# Description:	Using various if-else statements and hardcoded commands
+
 
 
 def main():
