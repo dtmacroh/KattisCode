@@ -11,7 +11,7 @@ amt =  listI[0][0]
 gndTotal = 0
 maxWait= minutes
 counterWait = 0
-print(listI)
+#print(listI)
 for x in range (0, len(listI)):
     currWait =  listI[x][1]
     currAmt =  listI[x][0]
@@ -28,24 +28,12 @@ for x in range (0, len(listI)):
                 gndTotal = gndTotal + amt
         elif currWait > counterWait :
             counterWait = counterWait +1
-            print("counterwait {}".format(counterWait))
-            print("amt {}".format(amt))
+           # print("counterwait {}".format(counterWait))
+           # print("amt {}".format(amt))
             gndTotal = gndTotal + amt
             amt = currAmt
             
-           
-                
-          
-            
-            
-            print("gndTotal as of now {}".format(gndTotal))
-lastAmt = listI[len(listI)-1][0]
-# if (listI[len(listI)-1][1] == listI[len(listI)-2][1]):
-#     if amt < listI[len(listI)-1][0]:
-#         gndTotal = gndTotal + lastAmt
-# else:
-#     gndTotal = gndTotal + lastAmt
-#     print("here")
+           # print("gndTotal as of now {}".format(gndTotal))
 
      
     
