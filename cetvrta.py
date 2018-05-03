@@ -1,3 +1,4 @@
+#initialize everything to the same value
 x1Count,x2Count,y1Count,y2Count  = [0]*4
 x1,x2,y1,y2=[-1]*4
 
@@ -22,7 +23,7 @@ for x in range (0,3):
 
 #print(" x1:{} count:{} x2:{} count:{} y1:{} count:{} y2:{} count:{}".format(x1,x1Count,x2, x2Count,y1,y1Count, y2, y2Count) )
 finalx,finaly=[0]*2
-if x1Count==1:
+if x1Count==1: 
     finalx=x1
 else:
     finalx=x2
@@ -30,6 +31,7 @@ if y1Count==1:
     finaly=y1
 else:
     finaly=y2
+#output the final x and y
 print("{} {}".format(finalx, finaly))
 
 

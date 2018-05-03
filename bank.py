@@ -6,7 +6,7 @@ for r in range (0, rounds):
     mon, min = [int (i) for i in input("").split()]
     listI.append((mon,min))
 
-listI.sort(key=lambda tup: (tup[1]))
+listI.sort(key=lambda tup: (tup[0]), reverse = True)
 amt =  listI[0][0]
 gndTotal = 0
 maxWait= minutes
