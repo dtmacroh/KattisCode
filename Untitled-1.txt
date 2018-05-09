@@ -1,0 +1,3 @@
+#simon
+
+inp = input().split()
