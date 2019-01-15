@@ -10,6 +10,8 @@ def rec(num):
     if num==1:
         return num
     else:
-        return num**rec(num-1)
+        # z = rec(num-1)%m
+        # return (num**(z+m))%m
+        return (num**rec(num-1))%m
 
-print(rec(n)%m)
+print(rec(n))
