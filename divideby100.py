@@ -7,4 +7,7 @@ n = int(input())
 m = int(input())
 
 res = n/m
-print(res)
+if (n%m==0):
+    print(int(res))
+else:
+    print(res)
