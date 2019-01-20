@@ -38,7 +38,7 @@ def phi(n):
 
 if (n > 5):
     z = rec(n)
-    print(z)
+    #print(z)
     print((n**(phi(m)+z))%m)
 else:
     print(rec(n))
