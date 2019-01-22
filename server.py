@@ -9,8 +9,9 @@ times = [int(i) for i in input().split(" ")]
 
 totTime = T
 counter = 0
-for i in range(times):
+for i in range(len(times)):
     totTime -= times[i]
     if totTime >0:
-        counter++
+        counter+=1
 
+print(counter)
