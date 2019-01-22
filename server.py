@@ -10,8 +10,9 @@ times = [int(i) for i in input().split(" ")]
 totTime = T
 counter = 0
 for i in range(len(times)):
-    totTime -= times[i]
-    if totTime >0:
-        counter+=1
+    if times[i]<=totTime:
+        totTime -= times[i]
+        if totTime >=0:
+            counter+=1
 
 print(counter)
