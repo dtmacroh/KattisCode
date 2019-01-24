@@ -1,7 +1,7 @@
 # thesaurus
 # Author:		Debbie Macrohon
 # Description:	Find the miniumum number of letters
-
+#
 
 vars = [int(i) for i in input().split(" ")]
 n = vars[0]
