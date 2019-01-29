@@ -1,6 +1,6 @@
 # Exponial
 # Author:		Debbie Macrohon
-# Description:	using modular exponentiation
+# Description:	using modular exponentiation and euler's totient
 #               
 vars = [int(i) for i in input().split(" ")]
 n = vars[0]
@@ -14,7 +14,7 @@ def rec(num):
         # return (num**(z+m))%m
         return (num**z)%m
     else:
-        z = rec(num-1)%phi(m)
+        z =(num**(rec(num-1)))%phi(m)
         return z
         # return (num**(z+m))%m
         #print(phi(m))
