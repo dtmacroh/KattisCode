@@ -1,6 +1,6 @@
 # elevatortrouble
 # Author:		Debbie Macrohon
-# Description:	
+# Description:	greedy algorithm
 
 vars = [int(i) for i in input().split(" ")]
 floors = vars[0]
@@ -16,7 +16,7 @@ going = start
 while (goal>going) and up >0:
     going= going + up
     pushes +=1
-    
+
 #going down while loop
 while (going > goal) and down >0:
 
