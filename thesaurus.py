@@ -9,9 +9,13 @@ def findMin(newPhraseFull,c):
     if newPhraseArray[c] in thesaurus and c >=0:
         newPhraseArray[c] = thesaurus[newPhraseArray[c]]
         newPhraseAfter = ''.join(newPhraseArray)
-        
-        return newPhraseAfter
-    return min(len(findMin(newPhraseFull,c-1)),len(findMin(newPhraseAfter,c-1)))
+        print(newPhraseAfter)
+        print(c)
+        if len(newPhraseAfter)<len(newPhraseFull):
+            return len(newPhraseAfter)
+        else:
+            return len(newPhraseFull)
+    return min(findMin(newPhraseFull,c-1),findMin(newPhraseAfter,c-1))
 
 vars = [int(i) for i in input().split(" ")]
 n = vars[0]
@@ -30,6 +34,6 @@ print(thesaurus)
 leastCount = len(''.join(phrasewords))
 for i in phrasewords:
     res = findMin(phrase,len(phrasewords)-1)
-    if leastCount>len(res):
-        leastCount = len(res)
+    if leastCount>res:
+        leastCount = res
 print(res,leastCount)
